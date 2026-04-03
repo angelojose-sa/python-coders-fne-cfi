@@ -1,0 +1,18 @@
+[
+  {
+    "data_hora": "2026-04-03 17:19:42",
+    "ncm": "99999999",
+    "cfi": "",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "NCM não consta na lista de passíveis de credenciamento no CFI. Bem financiável pelo FNE!"
+  },
+  {
+    "data_hora": "2026-04-03 17:18:44",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  }
+]
