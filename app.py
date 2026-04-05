@@ -12,6 +12,118 @@ from report import gerar_relatorio_pdf
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(ROOT, "NCMspassíveisdeCFI.csv")
 HISTORY_PATH = os.path.join(ROOT, "history.json")
+LOGO_PATH = os.path.join(ROOT, "modelos", "Logo_do_Banco_do_Nordeste.svg")
+
+
+def aplicar_tema_visual():
+    # Paleta institucional solicitada
+    pantone_194c = "#9D2235"
+    pantone_151c = "#FF8200"
+    pantone_425c = "#54585A"
+
+    st.markdown(
+        f"""
+        <style>
+            :root {{
+                --cor-primaria: {pantone_194c};
+                --cor-secundaria: {pantone_151c};
+                --cor-terciaria: {pantone_425c};
+            }}
+
+            .stApp {{
+                background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+            }}
+
+            .app-header {{
+                border-radius: 14px;
+                border: 1px solid rgba(84, 88, 90, 0.2);
+                padding: 1rem 1.2rem;
+                background: linear-gradient(120deg, rgba(157, 34, 53, 0.06), rgba(255, 130, 0, 0.08));
+                margin-bottom: 1rem;
+            }}
+
+            .app-title {{
+                color: var(--cor-primaria);
+                font-weight: 800;
+                letter-spacing: 0.2px;
+                margin: 0;
+                line-height: 1.1;
+            }}
+
+            .app-subtitle {{
+                color: var(--cor-terciaria);
+                margin-top: 0.4rem;
+                font-weight: 500;
+                font-size: 0.96rem;
+            }}
+
+            .logo-wrap {{
+                width: 100%;
+                max-width: 110px;
+                margin: 0.35rem auto 0 auto;
+            }}
+
+            .logo-wrap svg {{
+                width: 100% !important;
+                height: auto !important;
+                display: block;
+            }}
+
+            div[data-baseweb="input"] > div,
+            .stTextInput > div > div > input {{
+                border-color: rgba(84, 88, 90, 0.35) !important;
+            }}
+
+            .stButton > button,
+            .stDownloadButton > button,
+            .stFormSubmitButton > button {{
+                background: var(--cor-primaria) !important;
+                color: #ffffff !important;
+                border: none !important;
+                border-radius: 9px !important;
+                font-weight: 700 !important;
+            }}
+
+            .stButton > button:hover,
+            .stDownloadButton > button:hover,
+            .stFormSubmitButton > button:hover {{
+                background: var(--cor-secundaria) !important;
+                color: #2f2f2f !important;
+            }}
+
+            .stAlert {{
+                border-radius: 10px;
+            }}
+
+            h3 {{
+                color: var(--cor-terciaria);
+            }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def renderizar_cabecalho():
+    col_logo, col_texto = st.columns([0.7, 3.3])
+    with col_logo:
+        if os.path.exists(LOGO_PATH):
+            with open(LOGO_PATH, "r", encoding="utf-8") as f:
+                svg_content = f.read()
+            st.markdown(
+                f"<div class='logo-wrap'>{svg_content}</div>",
+                unsafe_allow_html=True,
+            )
+    with col_texto:
+        st.markdown(
+            """
+            <div class="app-header">
+                <h1 class="app-title">Análise de Financiabilidade FNE</h1>
+                <div class="app-subtitle">Fundo Constitucional de Financiamento do Nordeste</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 def carregar_ncms_passiveis(csv_path: str):
@@ -96,7 +208,8 @@ def analisar_ncm(ncm: str, cfi: str = None, cst: str = None):
 
 def main():
     st.set_page_config(page_title="Análise Financiabilidade FNE", layout="centered")
-    st.title("Análise de Financiabilidade FNE")
+    aplicar_tema_visual()
+    renderizar_cabecalho()
 
     st.markdown("### 1) Entrada de dados")
     with st.form(key="analise_form"):
@@ -116,7 +229,12 @@ def main():
             st.error(res["mensagem"])
         else:
             st.success(res["resultado"])
-            st.json(res)
+            with st.expander("Ver detalhes da análise"):
+                st.write(f"Data/Hora: {res.get('data_hora', '')}")
+                st.write(f"NCM: {res.get('ncm', '')}")
+                st.write(f"CFI informado: {res.get('cfi', '') or 'Não informado'}")
+                st.write(f"CST informado: {res.get('cst', '') or 'Não informado'}")
+                st.write(f"Status da análise: {res.get('status', '')}")
 
             if st.button("Gerar relatório PDF"):
                 filename = f"relatorio_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"

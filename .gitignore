@@ -1,0 +1,2 @@
+# Ignorar notebooks de modelo (não impactam o app)
+modelos/*.ipynb

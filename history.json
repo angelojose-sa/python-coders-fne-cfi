@@ -1,5 +1,45 @@
 [
   {
+    "data_hora": "2026-04-05 00:11:25",
+    "ncm": "84295900",
+    "cfi": "03220848",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  },
+  {
+    "data_hora": "2026-04-04 23:49:38",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  },
+  {
+    "data_hora": "2026-04-04 23:47:40",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  },
+  {
+    "data_hora": "2026-04-04 23:44:14",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  },
+  {
+    "data_hora": "2026-04-04 23:09:00",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "pendente",
+    "resultado": "NCM consta na lista de passíveis de credenciamento no CFI. Investigar CFI/CST para decisão definitiva."
+  },
+  {
     "data_hora": "2026-04-04 00:50:32",
     "ncm": "84295900",
     "cfi": "3220848",
