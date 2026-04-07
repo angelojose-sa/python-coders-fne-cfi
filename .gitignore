@@ -1,2 +1,9 @@
 # Ignorar notebooks de modelo (não impactam o app)
 modelos/*.ipynb
+
+# Cache e bytecode Python
+__pycache__/
+*.py[cod]
+
+# Relatórios PDF gerados automaticamente
+relatorio_*.pdf

@@ -1,5 +1,279 @@
 [
   {
+    "data_hora": "2026-04-06 23:40:46",
+    "ncm": "",
+    "cfi": "04187800",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI em consulta direta. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "04187800",
+        "nomeItem": "RETROESCAVADEIRAS NEW HOLLAND",
+        "modeloItem": "B95C/ B110C",
+        "fabricante": "CNH INDUSTRIAL BRASIL LTDA.",
+        "cnpjFabricante": "01844555000182",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta direta por CFI"
+  },
+  {
+    "data_hora": "2026-04-06 23:38:53",
+    "ncm": "84295900",
+    "cfi": "04187800",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "04187800",
+        "nomeItem": "RETROESCAVADEIRAS NEW HOLLAND",
+        "modeloItem": "B95C/ B110C",
+        "fabricante": "CNH INDUSTRIAL BRASIL LTDA.",
+        "cnpjFabricante": "01844555000182",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 23:27:07",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "03220848",
+        "nomeItem": "Retroescavadeira 416 - 4.0",
+        "modeloItem": "Retroescavadeira 416",
+        "fabricante": "CATERPILLAR BRASIL LTDA",
+        "cnpjFabricante": "61064911000177",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 22:47:22",
+    "ncm": "84295900",
+    "cfi": "03789160",
+    "cst": "",
+    "status": "financiavel_condicionado",
+    "resultado": "Financiável se inexistente similar nacional.",
+    "justificativa": "NCM passível de CFI sem correspondência no catálogo.",
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 21:14:59",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI após refinamento. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "03904989",
+        "nomeItem": "RETROESCAVADEIRA MR406",
+        "modeloItem": "MR406 ADV",
+        "fabricante": "MULLER INDUSTRIA DE MAQUINAS DE CONSTRUCAO LTDA",
+        "cnpjFabricante": "11938604000108",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 21:11:55",
+    "ncm": "08109015",
+    "cfi": "",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "NCM não passível de credenciamento no CFI.",
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 21:10:09",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "04187800",
+        "nomeItem": "RETROESCAVADEIRAS NEW HOLLAND",
+        "modeloItem": "B95C/ B110C",
+        "fabricante": "CNH INDUSTRIAL BRASIL LTDA.",
+        "cnpjFabricante": "01844555000182",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 20:38:08",
+    "ncm": "08109015",
+    "cfi": "",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "NCM não passível de credenciamento no CFI.",
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 20:37:11",
+    "ncm": "84295900",
+    "cfi": "",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "04187800",
+        "nomeItem": "RETROESCAVADEIRAS NEW HOLLAND",
+        "modeloItem": "B95C/ B110C",
+        "fabricante": "CNH INDUSTRIAL BRASIL LTDA.",
+        "cnpjFabricante": "01844555000182",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-06 20:30:23",
+    "ncm": "",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI em consulta direta. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "03220848",
+        "nomeItem": "Retroescavadeira 416 - 4.0",
+        "modeloItem": "Retroescavadeira 416",
+        "fabricante": "CATERPILLAR BRASIL LTDA",
+        "cnpjFabricante": "61064911000177",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta direta por CFI"
+  },
+  {
+    "data_hora": "2026-04-06 20:27:06",
+    "ncm": "",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI em consulta direta. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "03220848",
+        "nomeItem": "Retroescavadeira 416 - 4.0",
+        "modeloItem": "Retroescavadeira 416",
+        "fabricante": "CATERPILLAR BRASIL LTDA",
+        "cnpjFabricante": "61064911000177",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta direta por CFI"
+  },
+  {
+    "data_hora": "2026-04-06 20:25:48",
+    "ncm": "",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI em consulta direta. Itens confirmados pelo usuário: 1.",
+    "itens_selecionados": [
+      {
+        "codigoFiname": "03220848",
+        "nomeItem": "Retroescavadeira 416 - 4.0",
+        "modeloItem": "Retroescavadeira 416",
+        "fabricante": "CATERPILLAR BRASIL LTDA",
+        "cnpjFabricante": "61064911000177",
+        "numeroNcm": "84295900",
+        "posicaoCadastral": "Financiável",
+        "imagemItem": ""
+      }
+    ],
+    "quantidade_itens_confirmados": 1,
+    "tipo_consulta": "Consulta direta por CFI"
+  },
+  {
+    "data_hora": "2026-04-06 20:21:06",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI após refinamento. Itens confirmados pelo usuário: 1.",
+    "tipo_consulta": "Consulta por NCM"
+  },
+  {
+    "data_hora": "2026-04-05 14:18:37",
+    "ncm": "",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem correspondente encontrado no catálogo CFI em consulta direta."
+  },
+  {
+    "data_hora": "2026-04-05 01:28:48",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI."
+  },
+  {
+    "data_hora": "2026-04-05 01:25:17",
+    "ncm": "84295900",
+    "cfi": "3220848",
+    "cst": "",
+    "status": "financiavel",
+    "resultado": "Financiável pelo FNE.",
+    "justificativa": "Bem credenciado e correspondente encontrado no catálogo CFI."
+  },
+  {
     "data_hora": "2026-04-05 00:11:25",
     "ncm": "84295900",
     "cfi": "03220848",

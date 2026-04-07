@@ -178,7 +178,9 @@ def buscar_produto_cfi(
     nome: str = None,
     modelo: str = None,
     marca: str = None,
+    fabricante: str = None,
     cnpj: str = None,
+    quantidade: int = 30,
 ):
     """
     Consulta o catálogo CFI do BNDES usando busca por keyword.
@@ -190,7 +192,7 @@ def buscar_produto_cfi(
     - Código CFI/Finame (ex: "03447782")
     
     Args:
-        ncm, cfi, nome, modelo, marca, cnpj: Parâmetros de busca
+        ncm, cfi, nome, modelo, marca, fabricante, cnpj: Parâmetros de busca
         
     Returns:
         dict: {"success": bool, "data": [...], "error": str, ...}
@@ -199,7 +201,7 @@ def buscar_produto_cfi(
         return {"success": False, "error": "BNDES_CFI_API_BASE_URL não configurada"}
 
     # Construir keyword a partir dos parâmetros disponíveis
-    # Prioridade: CFI > NCM > CNPJ > Nome
+    # Prioridade: CFI > NCM > CNPJ > Fabricante > Nome > Marca > Modelo
     keyword = None
     if cfi:
         keyword = cfi.strip()
@@ -207,10 +209,21 @@ def buscar_produto_cfi(
         keyword = ncm.strip()
     elif cnpj:
         keyword = cnpj.strip()
+    elif fabricante:
+        keyword = fabricante.strip()
     elif nome:
         keyword = nome.strip()
+    elif marca:
+        keyword = marca.strip()
+    elif modelo:
+        keyword = modelo.strip()
     else:
-        return {"success": False, "error": "Informe ao menos um parâmetro: CFI, NCM, CNPJ ou Nome"}
+        return {
+            "success": False,
+            "error": "Informe ao menos um parâmetro: CFI, NCM, CNPJ, Fabricante, Nome, Marca ou Modelo",
+        }
+
+    quantidade_limite = max(1, min(int(quantidade or 30), 500))
 
     # Construir URL corretamente
     # URL base: https://apis-gateway.bndes.gov.br
@@ -224,7 +237,7 @@ def buscar_produto_cfi(
     # Parâmetros da query (conforme modelo)
     params = {
         "keyword": keyword,
-        "quantidade": 30  # Limite de resultados
+        "quantidade": quantidade_limite,
     }
 
     try:
@@ -246,6 +259,7 @@ def buscar_produto_cfi(
                 "quantidade": len(itens),
                 "status_code": response.status_code,
                 "keyword": keyword,
+                "quantidade_solicitada": quantidade_limite,
                 "url": url
             }
             if auth_meta:
@@ -264,7 +278,8 @@ def buscar_produto_cfi(
                 "error": error_msg,
                 "status_code": response.status_code,
                 "url": url,
-                "keyword": keyword
+                "keyword": keyword,
+                "quantidade_solicitada": quantidade_limite,
             }
             
     except requests.exceptions.RequestException as exc:
@@ -273,5 +288,6 @@ def buscar_produto_cfi(
             "error": str(exc),
             "status_code": getattr(exc.response, "status_code", None),
             "url": url,
-            "keyword": keyword
+            "keyword": keyword,
+            "quantidade_solicitada": quantidade_limite,
         }
